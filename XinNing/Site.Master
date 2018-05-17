@@ -1,0 +1,323 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="XinNing.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8" />    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link href="Content/Site.css" rel="stylesheet" />
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <link href="Content/bootstrap-social.css" rel="stylesheet" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/jquery-2.2.4.js"></script>
+    <!--US phonenumber with -
+    <script src="Scripts/phonenumber.min.js"></script> -->
+  
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!--
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" />
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        -->
+    <link href="Content/font-awesome.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" sizes="96x96" href="Images/favicon-96x96-1.png" />
+    <!--Skill Page-->
+    <link href="Content/Skills/SkillBar.css" rel="stylesheet" />
+    <link href="Content/Skills/SkillsCircle.css" rel="stylesheet" />
+    <script src="Scripts/Skills/raphael.js"></script>
+    <script src="Scripts/Skills/init.js"></script>
+    <script src="Scripts/jquery-2.2.4.js"></script>
+    <script src="Scripts/Skills/TypeWrite.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+    <!--Functions
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
+      <script>//Back to Top Function
+          $(document).ready(function () {
+              // Show or hide the sticky footer button
+              $(window).scroll(function () {
+                  if ($(this).scrollTop() > 300) {
+                      $('.go-top').fadeIn(300);
+                  } else {
+                      $('.go-top').fadeOut(300);
+                  }
+              });
+              // Animate the scroll to top
+              $('.go-top').click(function (event) {
+                  event.preventDefault();
+                  $('html, body').animate({
+                      scrollTop: 0
+                  }, 300);
+              })
+          });
+      </script>
+    <!--US phone number-->
+      <script>
+          /**
+          * Apply mask for all inputs of type "tel"
+          * @model telephone
+          */
+          define("telephone", [], function () {
+              "use strict";
+              var applyMaskToAllInputsOfTypeTel = function () {
+
+                  var allInputs = document.getElementsByTagName("input");
+                  if (!allInputs || !allInputs.length) {
+                      return;
+                  };
+
+                  var inputArray = Array.prototype.slice.call(allInputs);
+
+                  var telephoneInputs = inputArray.filter(function (inputElement) {
+                      return inputElement.getAttribute("type") === "tel";
+                  });
+                  if (!telephoneInputs || !telephoneInputs.length) {
+                      return;
+                  };
+
+                  telephoneInputs.forEach(function (inputElement) {
+                      var lastValue = null;
+
+                      inputElement.addEventListener("keydown", function () {
+
+                          setTimeout(function () {
+
+
+                              var originalValue = inputElement.value;
+                              if (originalValue === lastValue) {
+                                  return;
+                              }
+
+                              var selectionStart = inputElement.selectionStart,
+                                  selectionEnd = inputElement.selectionEnd;
+                              var beforeCursor = originalValue.substring(0, selectionStart);
+                              var nonDigits = beforeCursor.replace(/\d/g, "");
+                              selectionStart -= nonDigits.length;
+                              selectionEnd -= nonDigits.length;
+
+                              var digitsOnly = originalValue.replace(/\D/g, "");
+                              var digits = digitsOnly.split("");
+
+
+                              if (digits.length > 3) {
+                                  digits.splice(3, 0, "-");
+
+                                  if (selectionStart > 3) {
+                                      selectionStart++;
+                                  }
+
+                                  if (selectionEnd > 3) {
+                                      selectionEnd++;
+                                  }
+                              }
+
+
+                              if (digits.length > 7) {
+                                  digits.splice(7, 0, "-");
+
+                                  if (selectionStart > 7) {
+                                      selectionStart++;
+                                  }
+
+                                  if (selectionEnd > 7) {
+                                      selectionEnd++;
+                                  }
+                              }
+
+
+                              lastValue = digits.join("");
+                              inputElement.value = lastValue;
+
+                              inputElement.selectionStart = selectionStart;
+                              inputElement.selectionEnd = selectionEnd;
+                          });
+
+                      });
+
+                  });
+
+              };
+              return {
+                  applyMask: applyMaskToAllInputsOfTypeTel
+              };
+          });
+
+          require(["telephone"], function (Telephone) {
+              Telephone.applyMask();
+          });
+      </script>
+      <!--US phone number-->  
+      
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+  
+    <form id="form1" runat="server">
+   
+
+<div class="container">
+     <!--Nav starts here -->
+    <!--https://bootsnipp.com/snippets/featured/toggle-navbar-->
+     <nav class="navbar navbar-default  navbar-fixed-top"  role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle " data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+            <a href="Default.aspx" class="navbar-brand"> 
+             <img class="Logo" src="Images/Logo.gif" width="150" height="150" /></a>
+
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="Default.aspx"  class="active" ><i class="fa fa-home" aria-hidden="true"></i>&nbsp;Home</a></li>
+            <li><a href="Skills.aspx"<i class="fa fa-tasks" aria-hidden="true"></i>&nbsp;Skills</a></li>
+            <li><a href="Projects.aspx"><i class="fa fa-coffee" aria-hidden="true"></i>&nbsp;Projects</a></li>
+            <li><a href="Contact.aspx"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;Contact</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+
+       </div><!-- /.Container -->
+    </nav><!-- /.navbar -->
+    <!--Nav ends here -->
+    <!--
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="navigation">
+               <div class="container">
+                  <div class="navbar-header">
+                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse.collapse">
+                     <span class="sr-only">Toggle navigation</span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                     </button>
+                     <div class="navbar-brand">
+                        <a  href="~/">
+                           <asp:Image ID="Logo" class="Logo" runat="server" ImageUrl="~/Images/Logo.gif" />
+                        </a>
+                     </div>
+                  </div>
+                  <div class="navbar-collapse collapse">
+                     <div class="menu">
+                        <ul class="nav nav-tabs navbar-right" role="tablist">
+                           <li ><a runat="server"  href="Default.aspx" class="active" ><i class="fa fa-home" aria-hidden="true"></i>&nbsp;Home</a></li>
+                           <li ><a runat="server"  href="Skills.aspx"><i class="fa fa-tasks" aria-hidden="true"></i>&nbsp;Skills</a></li>
+                           <li ><a runat="server" href="Projects.aspx"><i class="fa fa-coffee" aria-hidden="true"></i>&nbsp;Projects</a></li>
+                           <li ><a runat="server" href="Contact.aspx"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;Contact</a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </nav>
+
+        -->
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+             <hr />
+        </div>
+         <footer>
+            <div class="container">
+               <div class="row form-horizontal">
+                  <div class="col-md-4 col-sm-4">
+                     <div class="form-group">
+                        <div class="col-md-12 col-lg-12">
+                           <ul class="nav_footer">
+                              <li class="fa fa-check-square-o" aria-hidden="true"><a  href="Default.aspx" >Home</a></li>
+                              <li class="fa fa-check-square-o" aria-hidden="true"><a href="Skills.aspx">Skills</a></li>
+                              <li class="fa fa-check-square-o" aria-hidden="true"><a  href="Projects.aspx">Projects</a></li>
+                              <li class="fa fa-check-square-o" aria-hidden="true"><a  href="Contact.aspx">Contact</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-4 col-sm-4">
+                     <ul class=" nav_footer_center">
+                        <li><a href="Files/XINNING-Resume.pdf" target="_blank">
+                           <i class="fa fa-print btn btn-primary" aria-hidden="true"> Print Resume </i> </a>
+                        </li>
+                        <li>
+                           <a href="Files/XinNing-CoverLetter-WEB.pdf" target="_blank">
+                           <i class="fa fa-print btn btn-primary" aria-hidden="true"> Print CV </i></a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="col-md-4 col-sm-4">
+                     <div class=" nav_footer_right">
+                        <div class="form-group">
+                           <div class="col-md-6 col-sm-6">
+                              <asp:TextBox ID="txtNameMaster" runat="server" CssClass="form-control" placeholder=" Name*"></asp:TextBox>
+                           </div>
+                           <div class="col-md-6 col-sm-6">
+                              <asp:TextBox ID="txtPhoneMaster" runat="server" CssClass="form-control" TextMode="Phone"  type="tel"  maxlength="13" placeholder=" Telephone Number*"></asp:TextBox>
+                           </div>
+                           <div class="col-md-6 col-sm-6">
+                              <asp:RequiredFieldValidator ID="rfvNameMaster" runat="server" ErrorMessage="Name" ControlToValidate="txtNameMaster" ForeColor="Red" CssClass="text-danger" Display="Dynamic">* Name</asp:RequiredFieldValidator>
+                           </div>
+                           <div class="col-md-6 col-sm-6">
+                              <asp:RequiredFieldValidator ID="rfvPhoneNumberMaster" runat="server" 
+                                 ErrorMessage="Phone number" CssClass="text-danger"
+                                 Display="Dynamic" ControlToValidate="txtPhoneMaster" ForeColor="Red">* Phone number</asp:RequiredFieldValidator>
+                              <!--
+                               <asp:RegularExpressionValidator ID="revPhoneNumber" runat="server" 
+                                 ErrorMessage="Phone number" CssClass="text-danger"
+                                 Display="Dynamic" ValidationExpression="((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}"
+                                 ControlToValidate="txtPhoneMaster" ForeColor="Red"></asp:RegularExpressionValidator>-->
+                           </div>
+                        </div>
+                        <div class="form-group">
+                           <div class="col-md-12 col-sm-12">
+                              <asp:TextBox ID="txtEmailMaster" runat="server" CssClass="form-control" TextMode="Email" placeholder=" Email Address*"></asp:TextBox>
+                           </div>
+                           <div class="col-md-12">
+                              <asp:RequiredFieldValidator ID="rfdEmailMaster" runat="server" ErrorMessage="Email Address" ControlToValidate="txtEmailMaster" ForeColor="Red" CssClass="text-danger" Display="Dynamic">* Email.</asp:RequiredFieldValidator>
+                              <asp:RegularExpressionValidator ID="revEmailMaster" runat="server" ErrorMessage="Email" ControlToValidate="txtEmailMaster" Display="Dynamic" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">Must be vaild email address</asp:RegularExpressionValidator>
+                           </div>
+                        </div>
+                        <div class="form-group">
+                           <div class="col-md-12 col-sm-12">
+                              <asp:TextBox ID="txtMessageMaster" runat="server" Columns="150"  Rows="4" TextMode="MultiLine" CssClass="form-control" placeholder="    Message*"> </asp:TextBox>
+                           </div>
+                           <div class="col-md-12">
+                              <asp:RequiredFieldValidator ID="rfvMessageMaster" runat="server" 
+                                 ErrorMessage="Message" CssClass="text-danger"
+                                 Display="Dynamic" ControlToValidate="txtMessageMaster" ForeColor="Red">* What do you want to talk with me?</asp:RequiredFieldValidator>
+                           </div>
+                        </div>
+                        <div class="form-group">
+                           <div class="col-sm-12 contact_center ">
+                              <asp:Button ID="btnSubmitMaster" runat="server" Text="Submit" CssClass="btn btn-primary" OnClick="btnSubmitMaster_Click" />
+                           </div>
+                        </div>
+                        <div class="form-group">
+                           <div class="col-md-12 contact_center">
+                              <asp:Label ID="lblMessageMaster" runat="server" ForeColor="Blue" ></asp:Label>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div id="divFootArrow"><%--Back to Top--%>
+               <a href="#" class="go-top" style="display: inline;"><img src="Images/BackToTop.png" /></a>
+            </div>
+         </footer>
+         <div class="footer_info">
+            Copyright 2017 | Xin Ning
+         </div>
+      </div>      
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+@import url("SkillsBar.css");
+
+/* ------ layout
+-----------------------------------------------*/
+
+
+
+ 
+
+#content {
+     margin: auto;
+}
+
+.legend {
+      margin-top: 150px;
+}
+
+#content h1 {
+font-family:'Cabin Sketch', arial, serif;
+text-shadow:3px 3px 0 #ddd;
+color:#193340;
+font-size:40px;
+margin-bottom:40px;
+text-align:right;
+}
+
+.skills {
+float:left;
+clear:both;
+width:100%;
+}
+
+.skills ul,
+.skills li {
+display:block;
+list-style:none;
+margin:0;
+padding:0;
+}
+
+.skills li {
+float:right;
+clear:both;
+padding:0 15px;
+height:35px;
+line-height:35px;
+color:#fff;
+margin-bottom:1px;
+font-size:18px;
+}
+
+.skills .net {
+background: #FF0000;
+}
+.skills .js {
+background:#FF7F00;
+}
+
+.skills .css {
+background:#FFFF00;
+color: #000000;
+}
+
+.skills .html {
+background:#00FF00;
+}
+
+.skills .php {
+background:#0000FF;
+}
+
+.skills .sql {
+background:#4B0082;
+}
+
+.skills .java {
+background:#9400D3;
+}
+
+#diagram {
+float:left;
+width:600px;
+height:600px;
+
+}
+
+.get {
+display:none;
+}
+
+
+/* ------ anchors
+-----------------------------------------------*/
+
+a {
+text-decoration:none;
+color:#333;
+}
+
+#diagram text {
+    font-size: 30px;
+}
