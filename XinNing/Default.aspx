@@ -35,11 +35,11 @@
       <div class="col-md-4">
          <h3 class="break_line content">Welcome</h3>
          <p>You’ve found yourself at the online home of Xin Ning, a Web Developer & Software Engineer. Here you’ll find a selection of my latest work, stats about my skills 
-            and a link to my  <a href="Files/XINNING-Resume.pdf" target="_blank">resume</a> and <a href="Files/XinNing-CoverLetter-WEB.pdf" target="_blank">cv </a> (pdf).
+            and a link to my  <a href="Files/XINNING-Resume.pdf" target="_blank" style="color:blue;">resume</a> and <a href="Files/XinNing-CoverLetter-WEB.pdf" target="_blank" style="color:blue;">Cover Letter </a> (pdf).
          </p>
          <p>
-            If you have a project or need some extra help, please drop me an email at <a href="mailto:xin.ning@student.fairfield.edu">xin.ning@student.fairfield.edu</a>, 
-            alternatively you can fill out my contact form in the <a href="Contact.aspx">Contact</a> page .
+            If you have a project or need some extra help, please drop me an email at <a href="mailto:ningxin1989@hotmail.com" style="color:blue;">ningxin1989@hotmail.com</a>, 
+            alternatively you can fill out my contact form in the <a href="Contact.aspx" style="color:blue;">Contact</a> page .
          </p>
       </div>
       <div class="col-md-4">
