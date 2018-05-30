@@ -1,4 +1,4 @@
-﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -6,7 +6,6 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>
     </ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{ADD63FC9-976E-4B77-BEBE-8F38F27549A5}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
@@ -137,6 +136,12 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="Experience.aspx" />
+    <Content Include="Images\ticket-empty.jpg" />
+    <Content Include="Images\ticket.jpg" />
+    <Content Include="ZhuangBiShenQi.aspx" />
+    <Content Include="Content\ZXSQstyle.css" />
+    <Content Include="ZhuangXShenQi.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Skills.aspx" />
@@ -179,6 +184,22 @@
     <Compile Include="Skills.aspx.designer.cs">
       <DependentUpon>Skills.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Experience.aspx.cs">
+      <DependentUpon>Experience.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Experience.aspx.designer.cs">
+      <DependentUpon>Experience.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZhuangBiShenQi.aspx.cs">
+      <DependentUpon>ZhuangBiShenQi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZhuangXShenQi.aspx.cs">
+      <DependentUpon>ZhuangXShenQi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZhuangXShenQi.aspx.designer.cs">
+      <DependentUpon>ZhuangXShenQi.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -214,6 +235,11 @@
         </WebProjectProperties>
       </FlavorProperties>
     </VisualStudio>
+    <MonoDevelop>
+      <Properties>
+        <XspParameters Port="8080" Address="127.0.0.1" SslMode="None" SslProtocol="Default" KeyType="None" CertFile="" KeyFile="" PasswordOptions="None" Password="" Verbose="True" />
+      </Properties>
+    </MonoDevelop>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

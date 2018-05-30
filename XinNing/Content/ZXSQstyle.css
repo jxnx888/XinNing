@@ -1,0 +1,66 @@
+﻿* {
+    font-family: 'STheiti';
+}
+#lblName {
+    position: absolute;
+    top: 29%;
+    left: 10.6%;
+}
+
+#lblDeparture {
+    position: absolute;
+    top: 35.5%;
+    left: 10.6%;
+}
+
+#lblArrival {
+    position: absolute;
+    top: 35.5%;
+    left: 26%;
+}
+
+#lblFlightNumber {
+    position: absolute;
+    top: 29.5%;
+    left: 29%;
+}
+#lblDate {
+    position: absolute;
+    top: 29.5%;
+    left: 35%;
+}
+
+#lblName1 {
+    position: absolute;
+    top: 28%;
+    left: 55.6%;
+    font-size: 16px;
+}
+
+#lblDeparture1 {
+    position: absolute;
+    top: 33%;
+    left: 55.6%;
+    font-size: 14px;
+}
+
+#lblArrival1 {
+    position: absolute;
+    top: 35.5%;
+    left: 55.6%;
+    font-size: 14px;
+}
+
+#lblFlightNumber1 {
+    position: absolute;
+    top: 29.5%;
+    left: 29%;
+    font-size: 14px;
+}
+
+#lblDate1 {
+    position: absolute;
+    top: 40.4%;
+    left: 57%;
+    font-size: 14px;
+}

@@ -11,7 +11,7 @@
 namespace XinNing {
 	
 	
-	public partial class Projects {
+	public partial class Experience {
 		
 		protected System.Web.UI.WebControls.Content Content1;
 		

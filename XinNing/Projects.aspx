@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Projects.aspx.cs" Inherits="XinNing.Projects" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <title>Projects::Xin Ning</title>
-    <div class="projects_banner"">
+    <div class="projects_banner">
          <div class="banner_text">
          
             <h2>
@@ -81,6 +81,8 @@
             </div>
          </div>
       </div>
+            
+            
    </section>
 </div>
 
