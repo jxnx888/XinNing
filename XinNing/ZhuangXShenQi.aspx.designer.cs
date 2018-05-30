@@ -33,8 +33,6 @@ namespace Application {
 		
 		protected System.Web.UI.WebControls.Label lblArrival;
 		
-		protected System.Web.UI.WebControls.Label lblFlightNumber;
-		
 		protected System.Web.UI.WebControls.Label lblDate;
 		
 		protected System.Web.UI.WebControls.Label lblName1;
@@ -42,8 +40,6 @@ namespace Application {
 		protected System.Web.UI.WebControls.Label lblDeparture1;
 		
 		protected System.Web.UI.WebControls.Label lblArrival1;
-		
-		protected System.Web.UI.WebControls.Label lblFlightNumber1;
 		
 		protected System.Web.UI.WebControls.Label lblDate1;
 		

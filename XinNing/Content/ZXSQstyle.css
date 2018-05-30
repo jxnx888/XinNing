@@ -1,66 +1,73 @@
 ﻿* {
     font-family: 'STheiti';
 }
+.top-img{
+    width: 100%;
+}
+.full-textbox {
+    width:100%;
+    text-align:center;
+}
+/*
+   飞机机票
+*/
 #lblName {
     position: absolute;
-    top: 29%;
-    left: 10.6%;
+    top: 87px;
+    left: 60px;
+    font-size: 7px;
 }
 
 #lblDeparture {
     position: absolute;
-    top: 35.5%;
-    left: 10.6%;
+    top: 109px;
+    left: 60px;
+    font-size: 6px;
 }
 
 #lblArrival {
     position: absolute;
-    top: 35.5%;
-    left: 26%;
+    top: 109px;
+    left: 134px;
+    font-size: 6px;
 }
 
-#lblFlightNumber {
-    position: absolute;
-    top: 29.5%;
-    left: 29%;
-}
+
 #lblDate {
     position: absolute;
-    top: 29.5%;
-    left: 35%;
+    top: 91.5px;
+    left: 175px;
+    font-size: 6px;
+    font-weight: bold;
 }
-
+ .textbox-left{
+     text-align:left;
+ }
 #lblName1 {
     position: absolute;
-    top: 28%;
-    left: 55.6%;
-    font-size: 16px;
+    top: 90px;
+    left: 285px;
+    font-size: 7px;
 }
 
 #lblDeparture1 {
     position: absolute;
-    top: 33%;
-    left: 55.6%;
-    font-size: 14px;
+    top: 102px;
+    left: 285px;
+    font-size: 6px;
 }
 
 #lblArrival1 {
     position: absolute;
-    top: 35.5%;
-    left: 55.6%;
-    font-size: 14px;
+    top: 110px;
+    left: 285px;
+    font-size: 6px;
 }
 
-#lblFlightNumber1 {
-    position: absolute;
-    top: 29.5%;
-    left: 29%;
-    font-size: 14px;
-}
 
 #lblDate1 {
     position: absolute;
-    top: 40.4%;
-    left: 57%;
-    font-size: 14px;
+    top: 126px;
+    left: 288px;
+    font-size: 6px;
 }
