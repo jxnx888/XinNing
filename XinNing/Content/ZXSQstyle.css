@@ -1,73 +1,88 @@
 ﻿* {
     font-family: 'STheiti';
 }
-.top-img{
+
+.top-img {
     width: 100%;
 }
+
 .full-textbox {
-    width:100%;
-    text-align:center;
+    width: 100%;
+    text-align: left;
+    padding: 5px 0px 5px 13px;
+    margin: 5px 0px;
+    border-radius: 50px;
+}
+
+.full-button {
+    width: 100%;
+    text-align: center;
+    padding: 5px 0px;
+    margin: 5px 0px;
+    border-radius: 50px;
 }
 /*
    飞机机票
 */
-#lblName {
+#ContentPlaceHolder1_lblName {
     position: absolute;
-    top: 87px;
-    left: 60px;
-    font-size: 7px;
+    top: 128px;
+    left: 88px;
+    font-size: 5.5px;
 }
 
-#lblDeparture {
+#ContentPlaceHolder1_lblDeparture {
     position: absolute;
-    top: 109px;
-    left: 60px;
+    top: 145px;
+    left: 88px;
+    font-size: 5px;
+}
+
+#ContentPlaceHolder1_lblArrival {
+    position: absolute;
+    top: 144px;
+    left: 157px;
     font-size: 6px;
 }
 
-#lblArrival {
-    position: absolute;
-    top: 109px;
-    left: 134px;
-    font-size: 6px;
-}
 
-
-#lblDate {
+#ContentPlaceHolder1_lblDate {
     position: absolute;
-    top: 91.5px;
-    left: 175px;
+    top: 126.5px;
+    left: 191px;
     font-size: 6px;
     font-weight: bold;
 }
- .textbox-left{
-     text-align:left;
- }
-#lblName1 {
-    position: absolute;
-    top: 90px;
-    left: 285px;
-    font-size: 7px;
+
+.textbox-left {
+    text-align: left;
 }
 
-#lblDeparture1 {
+#ContentPlaceHolder1_lblName1 {
     position: absolute;
-    top: 102px;
-    left: 285px;
-    font-size: 6px;
+    top: 125px;
+    left: 295px;
+    font-size: 5px;
 }
 
-#lblArrival1 {
+#ContentPlaceHolder1_lblDeparture1 {
     position: absolute;
-    top: 110px;
-    left: 285px;
-    font-size: 6px;
+    top: 138px;
+    left: 295px;
+    font-size: 4px;
+}
+
+#ContentPlaceHolder1_lblArrival1 {
+    position: absolute;
+    top: 145px;
+    left: 295px;
+    font-size: 4px;
 }
 
 
-#lblDate1 {
+#ContentPlaceHolder1_lblDate1 {
     position: absolute;
-    top: 126px;
-    left: 288px;
+    top: 159px;
+    left: 301px;
     font-size: 6px;
 }

@@ -139,9 +139,8 @@
     <Content Include="Experience.aspx" />
     <Content Include="Images\ticket-empty.jpg" />
     <Content Include="Images\ticket.jpg" />
-    <Content Include="ZhuangBiShenQi.aspx" />
+    <Content Include="Ticket.aspx" />
     <Content Include="Content\ZXSQstyle.css" />
-    <Content Include="ZhuangXShenQi.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Skills.aspx" />
@@ -190,15 +189,12 @@
     <Compile Include="Experience.aspx.designer.cs">
       <DependentUpon>Experience.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ZhuangBiShenQi.aspx.cs">
-      <DependentUpon>ZhuangBiShenQi.aspx</DependentUpon>
+    <Compile Include="Ticket.aspx.cs">
+      <DependentUpon>Ticket.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ZhuangXShenQi.aspx.cs">
-      <DependentUpon>ZhuangXShenQi.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ZhuangXShenQi.aspx.designer.cs">
-      <DependentUpon>ZhuangXShenQi.aspx</DependentUpon>
+    <Compile Include="Ticket.aspx.designer.cs">
+      <DependentUpon>Ticket.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
