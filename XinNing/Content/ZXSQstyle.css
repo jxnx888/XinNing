@@ -5,6 +5,12 @@
 .top-img {
     width: 100%;
 }
+#myCanvas {
+    width: 82%;
+    height: 202px;
+    position: fixed;
+    border: 1px solid ;
+}
 
 .full-textbox {
     width: 100%;

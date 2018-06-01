@@ -4,6 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="text-center screenshot">
+               <canvas id="myCanvas" width="100%" height="auto"></canvas>
         <img class="top-img" src="../Images/ticket.jpg" id="img" runat="server">
         <img class="top-img" src="../Images/ticket-empty.jpg" id="imgEmpty" runat="server" >
             </div>
@@ -42,7 +43,6 @@
 
        <div class="col-md-12">
        <asp:Button id="Submit" runat="server" onclick="Button2_Click"  Text="一键生成" CssClass="full-button  btn btn-danger" />
-           
   
         </div>
 </asp:Content>
